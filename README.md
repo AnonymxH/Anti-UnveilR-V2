@@ -4,7 +4,7 @@
 
 A mirror for my local project.
 
-This is a Luau script obfuscation bot built for **educational purposes only**. Uses the amazing [Prometheus](https://github.com/prometheus-lua/Prometheus) obfuscator.
+This is a Luau script protection bot built for **educational purposes only**. Uses the amazing [Prometheus](https://github.com/prometheus-lua/Prometheus) obfuscator.
 
 > [!IMPORTANT]
 > Protection templates are required to protect against deobfuscation.
