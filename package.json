@@ -1,0 +1,13 @@
+{
+    "name": "anti-unveilr-v2",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "main.ts",
+    "scripts": {
+        "start": "node main.ts"
+    },
+    "dependencies": {
+        "discord.js": "^14.25.1",
+        "dotenv": "^17.2.3"
+    }
+}

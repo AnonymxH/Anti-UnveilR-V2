@@ -1,0 +1,7 @@
+node_modules
+.env
+temp
+
+# templates (.luau)
+src/Templates/*
+!src/Templates/index.ts
