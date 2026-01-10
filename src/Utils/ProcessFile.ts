@@ -78,8 +78,8 @@ export async function ProcessFile(
         let ProcessedContent = TemplatizeScript(RawContent)
         let UsingFilePath
 
-        if (IsDarkluaExist && RawContent.length > 50_000 && (RawContent.match(/\n/g) || []).length > 3) {
-            EditReply("⏳ Minifying script...")
+        if (IsDarkluaExist) {
+            EditReply("⏳ Checking script compatibility...")
 
             await writeFile(TempFilePath, ProcessedContent)
             await ExecFileAsync("darklua", [
