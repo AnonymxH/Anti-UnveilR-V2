@@ -9,7 +9,6 @@ import {
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle,
-    AttachmentBuilder,
     ComponentType,
     MessageFlags,
     Events,
