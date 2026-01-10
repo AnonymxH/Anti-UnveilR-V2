@@ -113,7 +113,7 @@ export async function ProcessFile(
 
             ProcessedContent = await readFile(PrometheusOutputTempFilePath, "utf-8")
         } else {
-            EditReply("⏳ Interacting with Obfuscation API...")
+            EditReply("⏳ Interacting with obfuscation API...")
 
             const Response = await fetch("https://wearedevs.net/api/obfuscate", {
                 method: "POST",
