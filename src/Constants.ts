@@ -1,5 +1,5 @@
 export const Disclaimer = `### ⚖️ Disclaimer
-This bot is provided for **educational purposes only**. You can review the bot's source code at https://github.com/MaiFengYXD/Anti-UnveilR-V2.
+This bot is provided for **educational purposes only**. You can review the bot's source code at https://github.com/MaiFengYXD/Anti-Deobfuscation.
 
 We value your privacy: we **never** store any scripts sent to this service.
 
@@ -8,4 +8,4 @@ The protection templates used could be patched at any time; therefore, use this 
 ### 📜 NOTE
 If you don't want to get your script obfuscated by Prometheus, use the \`/protect\` command instead.`
 
-export const Watermark = "--[[ Anti-UnveilR-V2 | Join to use: https://discord.gg/Ar6je8fFBE ]] "
+export const Watermark = "--[[ Anti-Deobfuscation | Join to use: https://discord.gg/Ar6je8fFBE ]] "
