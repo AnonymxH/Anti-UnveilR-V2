@@ -97,7 +97,7 @@ export async function ProcessFile(
             EditReply("⏳ Obfuscating script...")
 
             if (!UsingFilePath) {
-                await writeFile(TempFilePath, RawContent)
+                await writeFile(TempFilePath, ProcessedContent || RawContent)
                 UsingFilePath = TempFilePath
             }
 
@@ -121,7 +121,7 @@ export async function ProcessFile(
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    script: RawContent,
+                    script: ProcessedContent,
                 }),
             })
 
