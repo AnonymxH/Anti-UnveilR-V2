@@ -36,6 +36,8 @@ if (IsLuaJITExist && !existsSync(PrometheusCliPath)) {
     execSync(`git clone --depth 1 https://github.com/prometheus-lua/Prometheus.git ${path.join(TempDir, "Prometheus")}`)
 }
 
+const Watermark = "--[[ Anti-UnveilR-V2 | Join to use: https://discord.gg/Ar6je8fFBE ]] "
+
 const SyntaxErrors = [
     "Parsing Error at Position",
     "unexpected token",
@@ -111,7 +113,7 @@ export async function ProcessFile(
                 UsingFilePath,
             ])
 
-            ProcessedContent = await readFile(PrometheusOutputTempFilePath, "utf-8")
+            ProcessedContent = Watermark + (await readFile(PrometheusOutputTempFilePath, "utf-8"))
         } else {
             EditReply("⏳ Interacting with obfuscation API...")
 
@@ -128,7 +130,7 @@ export async function ProcessFile(
             const Data = (await Response.json()) as { success: boolean; obfuscated?: string; error?: string }
             if (!Data.success) throw new Error(Data.error!)
 
-            ProcessedContent = Data.obfuscated!
+            ProcessedContent = Data.obfuscated!.replace("--[[ v1.0.0 https://wearedevs.net/obfuscator ]] ", Watermark)
         }
 
         return new AttachmentBuilder(Buffer.from(ProcessedContent), { name: FileName })

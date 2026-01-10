@@ -1,5 +1,5 @@
 const Characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
-const AllCharacters = `0123456789${Characters}`
+const AllCharacters = "0123456789" + Characters
 
 export function RandomInteger(Min: number, Max: number) {
     return Math.floor(Math.random() * (Max - Min + 1)) + Min
