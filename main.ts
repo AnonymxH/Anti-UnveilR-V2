@@ -18,6 +18,17 @@ import { ProcessFile, QueueCooldown } from "./src/Utils/ProcessFile.ts"
 
 const Throttler = new ThrottledQueue(QueueCooldown)
 
+const Disclaimer =
+`### ⚖️ Disclaimer
+This bot is provided for **educational purposes only**. You can review the tool's source code at https://github.com/MaiFengYXD/Anti-UnveilR-V2.
+
+We value your privacy: we **never** store any scripts sent to this service.
+
+The detection templates used could be patched at any time; therefore, use this tool **at your own risk**.
+
+### 📜 NOTE
+If you already have a premium obfuscator (e.g. Luraph), this tool is unnecessary, as those services already effectively prevent UnveilR V2 deobfuscation. This tool specifically utilizes Prometheus for its protection.`
+
 const DiscordClient = new Client({ intents: [GatewayIntentBits.Guilds] })
 
 const Commands = [
@@ -51,7 +62,7 @@ DiscordClient.on(Events.InteractionCreate, async (Interaction) => {
     )
 
     const Response = await Interaction.reply({
-        content: `### ⚖️ Disclaimer\nThis bot is provided for **educational purposes only**. You can review the tool's source code at https://github.com/MaiFengYXD/Anti-UnveilR-V2.\nWe value your privacy: we **never** store any scripts sent to this service.`,
+        content: Disclaimer,
         components: [Row],
         flags: MessageFlags.Ephemeral,
     })
